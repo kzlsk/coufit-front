@@ -68,11 +68,11 @@ export default function StoreFindSideBar({
   useEffect(() => {
     if (selectedParentId) {
       const selectParent = regions.find(
-        (region) => region.id === selectedParentId
+        (region) => region.id === selectedParentId,
       );
       if (selectParent) {
         const children = regions.filter((region) =>
-          selectParent.childrenIdList.includes(region.id)
+          selectParent.childrenIdList.includes(region.id),
         );
         setChileRegions(children);
       }
